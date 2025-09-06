@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Untukmu, Sayang</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#ff9a9e 0%,#fecfef 50%,#f6d365 100%);
+      --card:#fff;
+      --accent:#ff6b81;
+      --muted:#6b6b6b;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Montserrat,system-ui,Arial;min-height:100vh;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px}
+    .wrap{width:100%;max-width:960px;background:rgba(255,255,255,0.9);border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,0.15);overflow:hidden}
+    header{padding:36px 32px;background:linear-gradient(90deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));display:flex;gap:20px;align-items:center}
+    .hero-photo{width:120px;height:120px;border-radius:14px;flex:0 0 120px;background:linear-gradient(180deg,#fff,#ffeef4);display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hero-photo img{width:100%;height:100%;object-fit:cover}
+    .hero-text h1{margin:0;font-size:28px;color:#2b2b2b}
+    .hero-text p{margin:6px 0 0;color:var(--muted)}
+
+    main{padding:28px 32px;display:grid;grid-template-columns:1fr 360px;gap:28px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,0.06)}
+
+    .love-letter{line-height:1.6;color:#333}
+    .poem{font-family:'Great Vibes',cursive;font-size:22px;color:var(--accent);margin:12px 0}
+
+    .side .count{display:flex;gap:12px;justify-content:space-between}
+    .count .item{flex:1;background:linear-gradient(180deg,#fff,#fff);padding:12px;border-radius:10px;text-align:center}
+    .count .num{font-weight:800;font-size:20px;color:var(--accent)}
+    .gallery{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .gallery img{width:calc(50% - 4px);border-radius:8px;height:80px;object-fit:cover}
+
+    footer{padding:18px 32px;background:linear-gradient(90deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:space-between}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+
+    /* hearts animation */
+    .hearts{position:fixed;left:0;top:0;pointer-events:none;width:100%;height:100%;overflow:hidden}
+    .heart{position:absolute;width:18px;height:18px;background:var(--accent);transform:rotate(45deg);border-radius:4px 4px 0 0;opacity:0.9}
+    .heart:after,.heart:before{content:"";position:absolute;background:var(--accent);width:18px;height:18px;border-radius:50%}
+    .heart:before{top:-9px;left:0}
+    .heart:after{left:-9px;top:0}
+
+    /* responsive */
+    @media (max-width:880px){main{grid-template-columns:1fr} .hero-photo{width:96px;height:96px} .card{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="hero-photo card">
+        <!-- Ganti src berikut dengan foto pacar Anda -->
+        <img src="poto profil.png" alt="Foto">
+      </div>
+      <div class="hero-text">
+        <h1>Untukmu, {{Novi Deisya N}}</h1>
+        <p>Setiap hari bersamamu adalah cerita terindahku.</p>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card love-letter">
+          <h2>Surat untukmu</h2>
+          <p>Sayangku {{Novi Deisya N}},</p>
+          <p>Aku menulis ini karena aku ingin kau tahu betapa berharganya dirimu bagi hidupku. Waktu yang kita habiskan bersama, tawa yang kau bagi, dan pelukan hangatmu membuat hari-hariku selalu lebih baik. Aku berterima kasih untuk kesabaranmu, dukunganmu, dan cinta yang kau berikan tanpa syarat.</p>
+          <div class="poem">"Kau adalah pelita di malamku, senyum yang tak pernah pudar."</div>
+          <p>Semoga setiap hari kita terus menulis bab baru bersama. Dengan sepenuh hati,</p>
+          <p style="margin-top:12px;font-weight:700">{{Rasya Juliansya}}</p>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h3>Apa yang kuingat</h3>
+          <ul>
+            <li>Senandung pertama yang kita dengarkan bersama.</li>
+            <li>Kopi dingin yang kau minum saat hujan.</li>
+            <li>Janji-janji kecil yang selalu kau tepati.</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="card">
+          <h3>Kisah Kita</h3>
+          <div class="count">
+            <div class="item"><div class="num">121+</div><div>Hari bersama</div></div>
+            <div class="item"><div class="num">∞</div><div>Cinta</div></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <h4>Galeri</h4>
+            <div class="gallery">
+              <img src="poto.png" alt="m1">
+              <img src="poto lagi.png" alt="m2">
+              <img src="poto juga.png" alt="m3">
+              <img src="poto bdua.png" alt="m4">
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px;text-align:center">
+          <h3>Surprise</h3>
+          <p>Tekan tombol di bawah untuk melihat pesan rahasiaku.</p>
+          <a href="#" class="btn" id="revealBtn">Klik untukmu 💌</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div style="font-size:14px;color:var(--muted)">Didesain khusus untuk {{Novi Deisya N}}</div>
+      <div>
+        <a href="#" class="btn" id="downloadBtn">Unduh HTML</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    // Ganti placeholder otomatis ketika user menyimpan file lokal (opsional)
+    // Reveal message
+    document.getElementById('revealBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      alert('Kau adalah alasan aku tersenyum setiap pagi. Aku sayang kamu 💖');
+    });
+
+    // Download current page as HTML
+    document.getElementById('downloadBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const html = '<!doctype html>' + '\n' + document.documentElement.outerHTML;
+      const blob = new Blob([html], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'untukmu-sayang.html'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+
+    // Simple hearts animation
+    const hearts = document.getElementById('hearts');
+    function spawnHeart(){
+      const h = document.createElement('div');
+      h.className = 'heart';
+      const size = Math.random()*24 + 8;
+      h.style.width = size + 'px'; h.style.height = size + 'px';
+      h.style.left = Math.random()*100 + '%';
+      h.style.top = '100%';
+      hearts.appendChild(h);
+      const animDur = 4000 + Math.random()*3000;
+      h.animate([
+        {transform: 'translateY(0) scale(1)', opacity:1},
+        {transform: 'translateY(-120vh) translateX(' + ((Math.random()-0.5)*60) + 'px) scale(0.8)', opacity:0}
+      ],{duration:animDur, easing:'ease-out'}).onfinish = ()=> h.remove();
+    }
+    setInterval(spawnHeart, 700);
+  </script>
+</body>
+            </html>
